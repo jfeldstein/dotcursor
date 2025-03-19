@@ -1,0 +1,41 @@
+---
+description: Test Suite Best Practices for Complex Codebases
+globs: "**/__tests__/**/*.{js,jsx,ts,tsx}, **/*{test,spec}.{js,jsx,ts,tsx,go}"
+alwaysApply: false
+---
+
+# Test Suite Best Practices for Complex Codebases
+
+This rule file instructs the AI to generate test suites that are maintainable, clear, and effective when applied to large or complex codebases. The following guidelines should be applied:
+
+1. **Avoid Deep Nesting**
+   - Follow the principle from [Kent C. Dodds](mdc:https:/kentcdodds.com/blog/avoid-nesting-when-youre-testing) to reduce the use of nested `describe` and `beforeEach` blocks. Prefer inline test definitions (using `test` or `it`) to keep each test self-contained.
+
+2. **Minimize Over-Abstraction**
+   - Do not create unnecessary abstractions or helper functions that hide test intent. If shared code is needed, favor small, pure functions that return context rather than mutating outer variables.
+   - Avoid excessive use of global mutable state across tests.
+
+3. **Favor Clarity and Readability**
+   - Structure tests using the Arrange–Act–Assert pattern.
+   - Use clear, descriptive test names that explain the intended behavior.
+   - Keep setup and assertions inline when practical, so that the test’s intent is immediately visible.
+
+4. **Group Tests by File, Not by Nested Blocks**
+   - Organize related tests within separate files rather than deep nesting within a single file. This helps reduce cognitive load and makes parallel execution simpler.
+
+5. **Handle Asynchronous Code Gracefully**
+   - When testing asynchronous operations, ensure tests are deterministic and include proper cleanup or use of asynchronous hooks to avoid side effects.
+
+6. **Maintain Consistency**
+   - Follow a consistent style for test code across the project. Use the project’s standard testing libraries and naming conventions.
+   - When common setup is unavoidable, use lightweight helper functions that return objects without mutating shared state.
+
+7. **Additional Best Practices**
+   - Consider incorporating guidelines for cleaning up after tests (e.g., using `afterEach` for global teardown).
+   - Ensure tests remain self-contained, so that failures are easy to diagnose.
+   - Encourage writing tests that focus on user behavior and outcomes rather than internal implementation details.
+   - Write tests in Arrange, Act, Assert format
+
+> **Note:** These guidelines are meant to support AI-generated test code that is both robust and easy to maintain. They help the AI focus on producing tests that are clear, minimal, and aligned with the principles of effective test design.
+
+

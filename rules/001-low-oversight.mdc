@@ -1,0 +1,29 @@
+---
+description: Low-Oversight Development
+globs: 
+alwaysApply: true
+---
+- Autonomous development approach:
+  - Implement incremental changes with clear boundaries
+  - Document decisions and trade-offs in code comments
+  - Create detailed commit messages explaining changes
+  - Maintain a development log in docs/development-log.md
+
+- Self-verification:
+  - Run tests before committing changes
+  - Verify API contracts against specifications
+  - Check for security vulnerabilities
+  - Validate Kubernetes manifests
+
+- Progress tracking:
+  - Update tasks.txt with completed items
+  - Document blockers and open questions
+  - Track time estimates vs. actual time spent
+  - Prioritize tasks based on dependencies
+
+- Communication:
+  - Summarize complex changes in plain language
+  - Highlight decisions that require human input
+  - Provide clear options for decision points
+  - Document assumptions made during development
+

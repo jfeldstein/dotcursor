@@ -1,0 +1,28 @@
+---
+description: Google Calendar API Integration
+globs: 
+alwaysApply: false
+---
+- Use Google Calendar API v3 for all calendar operations
+- Required OAuth 2.0 scopes:
+  - calendar.readonly (for personal calendars)
+  - calendar.events (for work calendars)
+  - calendar.settings.readonly (optional)
+
+- API interaction patterns:
+  - Use webhook notifications for real-time updates
+  - Implement polling as fallback (every 10-15 minutes)
+  - Batch API requests when possible (up to 50 operations)
+  - Implement exponential backoff for rate limiting
+
+- Event handling:
+  - Personal events → Read only
+  - Work calendar → Create/update/delete shadows
+  - Shadow events should be marked with specific extended properties
+  - Implement conflict detection for manually modified shadows
+
+- Error handling:
+  - Retry transient errors with exponential backoff
+  - Log persistent errors and notify users
+  - Implement circuit breaker pattern for API outages
+

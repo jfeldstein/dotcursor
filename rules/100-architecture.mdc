@@ -1,0 +1,29 @@
+---
+description: ShadowCal Architecture Guide
+globs: 
+alwaysApply: true
+---
+- Project implements a Shadow Calendar Sync system that creates "busy" blocks on work calendars based on personal calendar events
+- Core components:
+  - OAuth Authentication (Google Calendar)
+  - Webhook Listener for real-time updates
+  - Polling Sync Service (fallback)
+  - Sync Engine (core logic)
+  - User Settings Management
+  - Audit Logging
+
+- Kubernetes deployment strategy:
+  - API Server → Kubernetes Deployment
+  - Webhook Listener → Kubernetes Deployment
+  - Polling Sync Service → Kubernetes CronJob
+  - Worker Pods → Kubernetes Deployment with Queue
+  - Database → Kubernetes StatefulSet
+  - Monitoring → Prometheus & Grafana
+
+- Privacy-first design:
+  - No personal event details stored
+  - OAuth tokens encrypted at rest
+  - Minimal data retention
+
+- Follow sync patterns from technical-notes.md for event handling
+ 

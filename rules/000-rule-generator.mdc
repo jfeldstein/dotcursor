@@ -1,0 +1,25 @@
+---
+description: Rule Generator
+globs: **/*.mdc
+alwaysApply: false
+---
+# Rule Generator
+
+- When asked to create a new rule:
+  - Generate a properly formatted .mdc file
+  - Use consistent naming convention (###-category-name.mdc)
+  - Include appropriate front matter (description, globs, alwaysApply)
+  - Structure content with clear sections and bullet points
+  - Save to .cursor/rules/ directory
+
+- Rule categories:
+  - 000-099: Core/Meta rules
+  - 100-199: Architecture and design rules
+  - 200-299: API integration rules
+  - 300-399: Testing and quality rules
+  - 400-499: Deployment and infrastructure rules
+
+- When updating existing rules:
+  - Preserve front matter structure
+  - Maintain consistent formatting
+  - Document changes in rule content

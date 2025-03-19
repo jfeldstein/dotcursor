@@ -1,0 +1,10 @@
+*
+
+# Directories to un-ignore
+!extensions/
+!rules/
+
+# Files to un-ignore
+!extensions/extensions.json
+!rules/*.mdc
+!mcp.json

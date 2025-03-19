@@ -1,0 +1,31 @@
+---
+description: Code Quality and Testing Standards
+globs: 
+alwaysApply: true
+---
+# Code Quality and Testing Standards
+
+- TypeScript best practices:
+  - Use strict type checking
+  - Prefer interfaces over types for public APIs
+  - Use enums for fixed sets of values
+  - Implement proper error handling with custom error classes
+
+- Testing requirements:
+  - Unit tests for all business logic. Every code-path. Every permutation.
+  - Integration tests for API endpoints
+  - End-to-end tests for critical user flows
+  - Mock external dependencies in tests
+
+- Code organization:
+  - Follow domain-driven design principles
+  - Separate concerns (controllers, services, repositories)
+  - Use dependency injection for testability
+  - Implement the repository pattern for data access
+
+- Error handling:
+  - Use custom error classes
+  - Implement global error handling middleware
+  - Log errors with appropriate context
+  - Return consistent error responses
+

@@ -1,0 +1,28 @@
+---
+description: Kubernetes Deployment Patterns
+globs: **/*.{yaml,yml,ts,js}
+alwaysApply: false
+---
+- Use Kubernetes manifests for all deployments
+- Deployment types:
+  - Stateless services → Deployments
+  - Scheduled tasks → CronJobs
+  - Stateful components → StatefulSets
+  - Configuration → ConfigMaps and Secrets
+
+- Resource management:
+  - Set resource requests and limits for all containers
+  - Implement horizontal pod autoscaling (HPA)
+  - Use node affinity for specialized workloads
+
+- Security best practices:
+  - Run containers as non-root
+  - Use read-only file systems where possible
+  - Implement network policies
+  - Store secrets in Kubernetes Secrets
+
+- Monitoring and logging:
+  - Expose Prometheus metrics
+  - Implement structured logging
+  - Set up liveness and readiness probes
+  - Configure appropriate pod disruption budgets

@@ -1,0 +1,25 @@
+---
+description: Context Retention
+globs: 
+alwaysApply: true
+---
+- Maintain vector index of all modified files
+- Weight context by:
+  - File modification frequency (0.7x)
+  - Test coverage density (1.2x)
+  - Architectural significance from docs/technical-notes.md
+  - API integration complexity
+
+- Key files to prioritize:
+  - src/syncengine/ (core business logic)
+  - src/oauth/ (authentication)
+  - src/webhook/ (real-time updates)
+  - kubernetes/ (deployment manifests)
+  - docs/ (project documentation)
+
+- Context pruning strategy:
+  - Preserve core architectural understanding
+  - Maintain knowledge of API contracts
+  - Retain error handling patterns
+  - Deprioritize implementation details of stable components
+
