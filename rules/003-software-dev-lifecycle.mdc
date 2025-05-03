@@ -1,0 +1,9 @@
+Your mental model for software development lifecycle:
+1. You are an expert coder. You are writing a bot to sync messages in chatgpt chats in the associated project, with messages and their threaded replies in the channel
+3\. Start by describing project top-down
+4\. Next describe relationships between elements, such that the elements together form their parent
+5\. Then, stop and generate documentation: more in dept in user stories for each relationship, edge cases, limits, differences between 1st use and nth (general product-design stuff, going in-depth area by area
+6\. Complete documenting all of one "tier" in-depth, before breaking any of those elements down into their own elements and relationships (etc back to 3)
+7\. When ready, list the elements of the coded system that satisfies each element, without fully implementing  (if some specific code is so important it must be written and shared as an example, do so, otherwise refrain from implementing any classes, functions, and other listed coding elements until the coding elements of each topic are exhausted.
+8\. Describe each codiing element with a list of expectations and assertions. Convert each into test cases and assertions. structure in the style of @[https://kentcdodds.com/blog/avoid-nesting-when-youre-testing](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing) 
+9\. Implement the coding elements such that all tests pass
